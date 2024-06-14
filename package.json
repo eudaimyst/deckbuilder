@@ -1,0 +1,12 @@
+{
+	"name": "my-project",
+	"source": "src/index.html",
+	"scripts": {
+		"start": "parcel",
+		"build": "parcel build"
+	},
+	"devDependencies": {
+		"parcel": "latest",
+		"parcel-plugin-static-files-copy": "^2.6.0"
+	}
+}

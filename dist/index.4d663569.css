@@ -1,0 +1,108 @@
+body {
+  color: #f8f8ff;
+  font-style: bold;
+  background-color: #000;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+}
+
+h1 {
+  color: #ff69b4;
+  font-family: cursive;
+}
+
+.buttonImg {
+  background-color: #333;
+  width: 64px;
+  height: 64px;
+}
+
+.testingclass {
+  align-items: flex-start;
+  margin: 0;
+  padding-right: 80%;
+}
+
+.img {
+  text-align: center;
+  color: red;
+  background-color: #000;
+}
+
+.unitButton {
+  color: #fff;
+  font-style: bold;
+  font-size: smallest;
+  background-color: #556b2f;
+  align-content: normal;
+  width: 300px;
+  height: 100px;
+  margin-left: 0;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cells {
+  background-image: url("border_frame.89e6c05d.png");
+  align-content: end;
+  width: 100px;
+  height: 100px;
+  font-size: 12px;
+}
+
+#Core {
+  border: outset #d5b60a;
+  width: 800px;
+}
+
+#cell1 {
+  border: outset #d5b60a;
+}
+
+#cell2 {
+  border: outset #ff8c00;
+}
+
+#cell3 {
+  border: outset #8b0000;
+}
+
+#cell4 {
+  border: outset #ff4500;
+}
+
+#cell5 {
+  border: outset #d5b60a;
+}
+
+#cell6 {
+  border: outset #008b8b;
+}
+
+#cell7 {
+  border: outset purple;
+}
+
+#cell8 {
+  border: outset #00f;
+}
+
+#Foundry {
+  border: outset #ff8c00;
+  width: 800px;
+}
+
+#Starforge {
+  border: outset #008b8b;
+  width: 800px;
+}
+
+#AdvFoundry {
+  border: outset #8b0000;
+  width: 800px;
+}
+
+#AdvStarforge {
+  border: outset purple;
+  width: 800px;
+}
+/*# sourceMappingURL=index.4d663569.css.map */
