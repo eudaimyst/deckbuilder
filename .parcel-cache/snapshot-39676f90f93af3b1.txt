@@ -28,7 +28,7 @@
 58C:\dev\webdev\deckbuilder\node_modules\has-flag\index.d.ts133623876354499503 0
 52C:\dev\webdev\deckbuilder\node_modules\source-map-js133623876361714186 1
 36C:\dev\webdev\deckbuilder\src\images133627797184303745 1
-30C:\dev\webdev\deckbuilder\dist133628005480716001 1
+30C:\dev\webdev\deckbuilder\dist133628286179434487 1
 65C:\dev\webdev\deckbuilder\node_modules\csso\cjs\clean\Comment.cjs133623876361884205 0
 48C:\dev\webdev\deckbuilder\node_modules\is-number133623876355939512 1
 77C:\dev\webdev\deckbuilder\node_modules\cosmiconfig\dist\ExplorerBase.d.ts.map133623876364529355 0
@@ -38,7 +38,7 @@
 75C:\dev\webdev\deckbuilder\node_modules\caniuse-lite\data\features\path2d.js133623877250966205 0
 77C:\dev\webdev\deckbuilder\node_modules\utility-types\dist\mapped-types.js.map133623876359748605 0
 55C:\dev\webdev\deckbuilder\node_modules\@babel\highlight133623876356944648 1
-36C:\dev\webdev\deckbuilder\src\app.js133628005570435523 0
+36C:\dev\webdev\deckbuilder\src\app.js133628286179053817 0
 73C:\dev\webdev\deckbuilder\node_modules\type-fest\ts41\delimiter-case.d.ts133623876360293760 0
 84C:\dev\webdev\deckbuilder\node_modules\caniuse-lite\data\features\async-clipboard.js133623876371885224 0
 45C:\dev\webdev\deckbuilder\node_modules\@lezer133623876337818643 1
@@ -90,7 +90,7 @@
 77C:\dev\webdev\deckbuilder\node_modules\@parcel\events\test\Disposable.test.js133623876356559486 0
 48C:\dev\webdev\deckbuilder\src\images\bulwark.png133623799734151239 0
 69C:\dev\webdev\deckbuilder\node_modules\svgo\plugins\collapseGroups.js133623876411871044 0
-40C:\dev\webdev\deckbuilder\src\styles.css133628003928956862 0
+40C:\dev\webdev\deckbuilder\src\styles.css133628275139451004 0
 87C:\dev\webdev\deckbuilder\node_modules\css-tree\lib\syntax\node\index-parse-selector.js133623876531312849 0
 76C:\dev\webdev\deckbuilder\node_modules\csso\node_modules\css-tree\cjs\syntax133623876415418269 1
 69C:\dev\webdev\deckbuilder\node_modules\@parcel\core\src\buildCache.js133623876368104537 0
@@ -5639,7 +5639,7 @@
 113C:\dev\webdev\deckbuilder\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\scope\index.js133623876422619149 0
 116C:\dev\webdev\deckbuilder\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\scope\selector.js133623876454002504 0
 112C:\dev\webdev\deckbuilder\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\pseudo\dir.js133623876393380820 0
-56C:\dev\webdev\deckbuilder\dist\border_frame.89e6c05d.png133628003930472505 0
+56C:\dev\webdev\deckbuilder\dist\border_frame.89e6c05d.png133628205628983513 0
 73C:\dev\webdev\deckbuilder\node_modules\@parcel\core\lib\RequestTracker.js133623876503255964 0
 112C:\dev\webdev\deckbuilder\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\pseudo\has.js133623876407988880 0
 113C:\dev\webdev\deckbuilder\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\pseudo\lang.js133623876424934290 0
@@ -5764,9 +5764,9 @@
 72C:\dev\webdev\deckbuilder\node_modules\@parcel\fs\test\OverlayFS.test.js133623876360528988 0
 63C:\dev\webdev\deckbuilder\node_modules\@parcel\fs\src\NodeFS.js133623876359708596 0
 62C:\dev\webdev\deckbuilder\node_modules\@parcel\fs\src\types.js133623876360818960 0
-49C:\dev\webdev\deckbuilder\dist\index.4d663569.css133628003930722961 0
+49C:\dev\webdev\deckbuilder\dist\index.4d663569.css133628284559415682 0
 64C:\dev\webdev\deckbuilder\node_modules\@parcel\fs\lib\browser.js133623876355109504 0
-53C:\dev\webdev\deckbuilder\dist\index.4d663569.css.map133628003930752941 0
+53C:\dev\webdev\deckbuilder\dist\index.4d663569.css.map133628284559445679 0
 68C:\dev\webdev\deckbuilder\node_modules\@parcel\fs\lib\browser.js.map133623876361724187 0
 57C:\dev\webdev\deckbuilder\node_modules\@parcel\events\src133623876360203787 1
 79C:\dev\webdev\deckbuilder\node_modules\@parcel\events\test\ValueEmitter.test.js133623876360608961 0
@@ -6023,7 +6023,7 @@
 70C:\dev\webdev\deckbuilder\node_modules\.bin\update-browserslist-db.cmd133623877253481361 0
 70C:\dev\webdev\deckbuilder\node_modules\.bin\update-browserslist-db.ps1133623877253481361 0
 48C:\dev\webdev\deckbuilder\dist\core.79557778.svg133627704588002752 0
-52C:\dev\webdev\deckbuilder\dist\index.0641b553.js.map133628005480705998 0
+52C:\dev\webdev\deckbuilder\dist\index.0641b553.js.map133628286179424480 0
 48C:\dev\webdev\deckbuilder\dist\index.35f985c7.js133627484933780938 0
 60C:\dev\webdev\deckbuilder\dist\index.0641b553.js.map.6380.7y133627620044521212 0
 48C:\dev\webdev\deckbuilder\dist\index.1a29e8a5.js133627974448449361 0
@@ -6058,5 +6058,5 @@
 51C:\dev\webdev\deckbuilder\dist\images\starforge.svg133623798495111820 0
 54C:\dev\webdev\deckbuilder\dist\images\swiftshocker.png133627782949449615 0
 50C:\dev\webdev\deckbuilder\dist\images\valkyrie.png133623799801242130 0
-41C:\dev\webdev\deckbuilder\dist\index.html133628003931138135 0
-48C:\dev\webdev\deckbuilder\dist\index.0641b553.js133628005480686032 0
+41C:\dev\webdev\deckbuilder\dist\index.html133628201682352524 0
+48C:\dev\webdev\deckbuilder\dist\index.0641b553.js133628286179414473 0

@@ -18,7 +18,7 @@ h1 {
 }
 
 .deckStatsText {
-  background-color: gray;
+  background-color: #202020;
 }
 
 .testingclass {
@@ -51,6 +51,11 @@ h1 {
   width: 100px;
   height: 100px;
   font-size: 12px;
+}
+
+.warning {
+  color: red;
+  font-size: larger;
 }
 
 #cell1 {
@@ -89,35 +94,35 @@ h1 {
   color: #fff;
   background-color: #700000;
   border: outset #ff8c00;
-  width: 1400px;
+  width: 1200px;
 }
 
 #Core {
   color: #fff;
   background-color: #007000;
   border: outset #d5b60a;
-  width: 1400px;
+  width: 1200px;
 }
 
 #AdvFoundry {
   color: #fff;
   background-color: #700000;
   border: outset #8b0000;
-  width: 1400px;
+  width: 1200px;
 }
 
 #Starforge {
   color: #fff;
   background-color: #000070;
   border: outset #008b8b;
-  width: 1400px;
+  width: 1200px;
 }
 
 #AdvStarforge {
   color: #fff;
   background-color: #000070;
   border: outset purple;
-  width: 1400px;
+  width: 1200px;
 }
 
 .inDeck {
