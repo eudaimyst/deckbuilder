@@ -310,10 +310,12 @@ function getDeckUnitTypes() {
 //handle when a deck unit is added to the current Deck list
 
 var remCoreUnits = 2;
-var remFoundryUnits = 3;
-var remStarforgeUnits = 3;
-var remAdvFoundryUnits = 3;
-var remAdvStarforgeUnits = 3;
+var remFoundryUnits = 2;
+var remStarforgeUnits = 2;
+var remAdvFoundryUnits = 2;
+var remAdvStarforgeUnits = 2;
+var remTotalFoundryUnits = 3;
+var remTotalStarforgeUnits = 3;
 
 function updateDeckStats() {
 	deckStatsText.innerHTML = 'Deck Stats: ';
@@ -326,11 +328,11 @@ function updateDeckStats() {
 	for (var i = 0; i < currentDeckList.length; i++) {
 		deckStatsText.innerHTML += '-- ' + currentDeckList[i] + '<br> ';
 	}
-	deckStatsText.innerHTML += 'Remaining units: ' + (8 - currentDeckList.length) + ' ';
-	deckStatsText.innerHTML += 'Remaining Core Units: ' + remCoreUnits + ' ';
-	deckStatsText.innerHTML += 'Remaining Foundry Units: ' + remFoundryUnits + ' ';
-	deckStatsText.innerHTML += 'Remaining Starforge Units: ' + remStarforgeUnits + ' ';
-	deckStatsText.innerHTML += 'Remaining Adv. Foundry Units: ' + remAdvFoundryUnits + ' ';
+	deckStatsText.innerHTML += 'Remaining units: ' + (8 - currentDeckList.length) + '<br> ';
+	deckStatsText.innerHTML += 'Remaining Core Units: ' + remCoreUnits + '<br> ';
+	deckStatsText.innerHTML += 'Remaining Foundry Units: ' + remFoundryUnits + '<br> ';
+	deckStatsText.innerHTML += 'Remaining Starforge Units: ' + remStarforgeUnits + '<br> ';
+	deckStatsText.innerHTML += 'Remaining Adv. Foundry Units: ' + remAdvFoundryUnits + '<br> ';
 	deckStatsText.innerHTML += 'Remaining Adv. Starforge Units: ' + remAdvStarforgeUnits + '<br> ';
 	deckStatsText.innerHTML += 'Matter: ' + getDeckMatter() + '<br> ';
 	deckStatsText.innerHTML += 'Energy: ' + getDeckEnergy() + '<br> ';
@@ -397,29 +399,33 @@ Object.keys(unitJson).forEach((key) => {
 				return;
 			}
 		else if (unitJson[key].Building == 'Foundry')
-			if (remFoundryUnits > 0) {
+			if (remFoundryUnits > 0 && remTotalFoundryUnits > 0) {
 				remFoundryUnits--;
+				remTotalFoundryUnits--;
 			} else {
 				console.log('No more Foundry units');
 				return;
 			}
 		else if (unitJson[key].Building == 'Starforge')
-			if (remStarforgeUnits > 0) {
+			if (remStarforgeUnits > 0 && remTotalStarforgeUnits > 0) {
 				remStarforgeUnits--;
+				remTotalStarforgeUnits--;
 			} else {
 				console.log('No more Starforge units');
 				return;
 			}
 		else if (unitJson[key].Building == 'Advanced Foundry')
-			if (remAdvFoundryUnits > 0) {
+			if (remAdvFoundryUnits > 0 && remTotalFoundryUnits > 0) {
 				remAdvFoundryUnits--;
+				remTotalFoundryUnits--;
 			} else {
 				console.log('No more Advanced Foundry units');
 				return;
 			}
 		else if (unitJson[key].Building == 'Advanced Starforge')
-			if (remAdvStarforgeUnits > 0) {
+			if (remAdvStarforgeUnits > 0 && remTotalStarforgeUnits > 0) {
 				remAdvStarforgeUnits--;
+				remTotalStarforgeUnits--;
 			} else {
 				console.log('No more Advanced Starforge units');
 				return;

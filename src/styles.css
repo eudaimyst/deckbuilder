@@ -16,6 +16,8 @@ h1 {
 }
 .deckStatsText {
 	background-color: #202020;
+	font-size: smaller;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .testingclass {
 	margin-left: 0px;
