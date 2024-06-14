@@ -128,7 +128,7 @@
 		"Image": "stinger.png"
 	},
 	{
-		"Name": "AdvancedRecall",
+		"Name": "Advanced Recall",
 		"Health": 1,
 		"Damage": 3,
 		"Speed": 2,
@@ -240,7 +240,7 @@
 		"Image": "mortar.png"
 	},
 	{
-		"Name": "RecallShocker",
+		"Name": "Recall Shocker",
 		"Health": 3,
 		"Damage": 5,
 		"Speed": 1,
@@ -384,7 +384,7 @@
 		"Image": "gunbot.png"
 	},
 	{
-		"Name": "BlinkHunter",
+		"Name": "Blink Hunter",
 		"Health": 2,
 		"Damage": 1,
 		"Speed": 2,
@@ -416,7 +416,7 @@
 		"Image": "blink.png"
 	},
 	{
-		"Name": "recallhunter",
+		"Name": "Recall Hunter",
 		"Health": 2,
 		"Damage": 2,
 		"Speed": 1,
@@ -480,7 +480,7 @@
 		"Image": "crab.png"
 	},
 	{
-		"Name": "kingcrab",
+		"Name": "King Crab",
 		"Health": 4,
 		"Damage": 5,
 		"Speed": 3,

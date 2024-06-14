@@ -17,6 +17,10 @@ h1 {
   height: 64px;
 }
 
+.deckStatsText {
+  background-color: gray;
+}
+
 .testingclass {
   align-items: flex-start;
   margin: 0;
@@ -35,9 +39,9 @@ h1 {
   font-size: smallest;
   background-color: #556b2f;
   align-content: normal;
-  width: 300px;
+  align-items: baseline;
+  width: 200px;
   height: 100px;
-  margin-left: 0;
   font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -47,11 +51,6 @@ h1 {
   width: 100px;
   height: 100px;
   font-size: 12px;
-}
-
-#Core {
-  border: outset #d5b60a;
-  width: 800px;
 }
 
 #cell1 {
@@ -87,22 +86,41 @@ h1 {
 }
 
 #Foundry {
+  color: #fff;
+  background-color: #700000;
   border: outset #ff8c00;
-  width: 800px;
+  width: 1400px;
 }
 
-#Starforge {
-  border: outset #008b8b;
-  width: 800px;
+#Core {
+  color: #fff;
+  background-color: #007000;
+  border: outset #d5b60a;
+  width: 1400px;
 }
 
 #AdvFoundry {
+  color: #fff;
+  background-color: #700000;
   border: outset #8b0000;
-  width: 800px;
+  width: 1400px;
+}
+
+#Starforge {
+  color: #fff;
+  background-color: #000070;
+  border: outset #008b8b;
+  width: 1400px;
 }
 
 #AdvStarforge {
+  color: #fff;
+  background-color: #000070;
   border: outset purple;
-  width: 800px;
+  width: 1400px;
+}
+
+.inDeck {
+  background-color: #666;
 }
 /*# sourceMappingURL=index.4d663569.css.map */
