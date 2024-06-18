@@ -1,6 +1,6 @@
 console.log('Hello world!');
 
-import unitJson from './units3.json'; //with path
+import unitJson from './units.json'; //with path
 
 console.log(unitJson);
 //console.log(unitJson['length']);
@@ -37,10 +37,10 @@ document.getElementById('mainTable').appendChild(advStarforgeP);
 document.getElementById('mainTable').appendChild(unitInfoText);
 
 var cell1 = document.getElementById('cell1');
-var cell2 = document.getElementById('cell2');
-var cell3 = document.getElementById('cell3');
-var cell4 = document.getElementById('cell4');
-var cell5 = document.getElementById('cell5');
+var cell2 = document.getElementById('cell5');
+var cell3 = document.getElementById('cell2');
+var cell4 = document.getElementById('cell3');
+var cell5 = document.getElementById('cell4');
 var cell6 = document.getElementById('cell6');
 var cell7 = document.getElementById('cell7');
 var cell8 = document.getElementById('cell8');
@@ -228,7 +228,7 @@ function getDeckStrengths() {
 	currentDeckList.forEach((unit) => {
 		Object.keys(unitJson).forEach((key) => {
 			if (unitJson[key].Name == unit) {
-				if (unitJson[key].Strengths != undefined) {
+				if (unitJson[key]['Strong Against'] != undefined) {
 					strengths.push(unitJson[key].Strengths);
 				}
 			}
@@ -262,7 +262,7 @@ function getDeckAbilities() {
 	currentDeckList.forEach((unit) => {
 		Object.keys(unitJson).forEach((key) => {
 			if (unitJson[key].Name == unit) {
-				if (unitJson[key].Ability != undefined) {
+				if (unitJson[key].Ability != '') {
 					abilities.push(unitJson[key].Ability);
 				}
 			}
@@ -278,10 +278,11 @@ function getDeckAttackTypes() {
 		Object.keys(unitJson).forEach((key) => {
 			if (unitJson[key].Name == unit) {
 				if (unitJson[key]['Attack Type'] != undefined) {
-					attackTypes.push(unitJson[key]['Attack Type']);
+					if (unitJson[key]['Attack Type'] != '') attackTypes.push(unitJson[key]['Attack Type']);
 				}
 				if (unitJson[key]['Attack Type 2'] != undefined) {
-					attackTypes.push(unitJson[key]['Attack Type 2']);
+					//filter empty keys
+					if (unitJson[key]['Attack Type 2'] != '') attackTypes.push(unitJson[key]['Attack Type 2']);
 				}
 			}
 		});
@@ -296,7 +297,8 @@ function getDeckUnitTypes() {
 		Object.keys(unitJson).forEach((key) => {
 			if (unitJson[key].Name == unit) {
 				if (unitJson[key]['Unit Type'] != undefined) {
-					unitTypes.push(unitJson[key]['Unit Type']);
+					//filter empty keys
+					if (unitJson[key]['Unit Type'] != '') unitTypes.push(unitJson[key]['Unit Type']);
 				}
 			}
 		});
@@ -318,27 +320,25 @@ var remTotalFoundryUnits = 3;
 var remTotalStarforgeUnits = 3;
 
 function updateDeckStats() {
-	deckStatsText.innerHTML = 'Deck Stats: ';
-	deckStatsText.innerHTML = '<p class ="Warning">Warning: Missing Anti-Ground Core</p>';
-	deckStatsText.innerHTML += '<br> ';
-	deckStatsText.innerHTML += '<p class ="Warning">Warning: Missing Anti-Air Core</p>';
-	deckStatsText.innerHTML += '<br> ';
-	deckStatsText.innerHTML += 'Units: ' + currentDeckList.length + '<br> ';
-	//unit names
-	for (var i = 0; i < currentDeckList.length; i++) {
-		deckStatsText.innerHTML += '-- ' + currentDeckList[i] + '<br> ';
-	}
 	deckStatsText.innerHTML += 'Remaining units: ' + (8 - currentDeckList.length) + '<br> ';
 	deckStatsText.innerHTML += 'Remaining Core Units: ' + remCoreUnits + '<br> ';
 	deckStatsText.innerHTML += 'Remaining Foundry Units: ' + remFoundryUnits + '<br> ';
 	deckStatsText.innerHTML += 'Remaining Starforge Units: ' + remStarforgeUnits + '<br> ';
 	deckStatsText.innerHTML += 'Remaining Adv. Foundry Units: ' + remAdvFoundryUnits + '<br> ';
 	deckStatsText.innerHTML += 'Remaining Adv. Starforge Units: ' + remAdvStarforgeUnits + '<br> ';
-	deckStatsText.innerHTML += 'Matter: ' + getDeckMatter() + '<br> ';
-	deckStatsText.innerHTML += 'Energy: ' + getDeckEnergy() + '<br> ';
-	deckStatsText.innerHTML += 'Speed: ' + getDeckSpeed() + '<br> ';
-	deckStatsText.innerHTML += 'Damage: ' + getDeckDamage() + '<br> ';
-	deckStatsText.innerHTML += 'Health: ' + getDeckHealth() + '<br> ';
+	deckStatsText.innerHTML = '<p id ="Anti-GroundWarning">Warning: Missing Anti-Ground Core</p>';
+	deckStatsText.innerHTML += '<p id ="Anti-GroundWarningWarning">Warning: Missing Anti-Air Core</p>';
+	deckStatsText.innerHTML = 'Deck Stats: ';
+	deckStatsText.innerHTML += 'Units: ' + currentDeckList.length + '<br> ';
+	//unit names
+	for (var i = 0; i < currentDeckList.length; i++) {
+		deckStatsText.innerHTML += '-- ' + currentDeckList[i] + '<br> ';
+	}
+	deckStatsText.innerHTML += 'Matter: ' + getDeckMatter() + ' (average 1,000.00 min600max1400)<br> ';
+	deckStatsText.innerHTML += 'Energy: ' + getDeckEnergy() + ' (average 837.50 min500max1175)<br> ';
+	deckStatsText.innerHTML += 'Speed: ' + getDeckSpeed() + ' (average 20.00 min11max29)<br> ';
+	deckStatsText.innerHTML += 'Damage: ' + getDeckDamage() + ' (average 29 min24max29)<br> ';
+	deckStatsText.innerHTML += 'Health: ' + getDeckHealth() + ' (average 22.5 min10max35<br> ';
 	deckStatsText.innerHTML += '<br> ';
 	deckStatsText.innerHTML += 'Strengths: ' + getDeckStrengths() + '<br> ';
 	deckStatsText.innerHTML += 'Weaknesses: ' + getDeckWeaknesses() + '<br> ';
@@ -349,6 +349,19 @@ function updateDeckStats() {
 	deckStatsText.innerHTML += '<br> ';
 	deckStatsText.innerHTML += 'Unit Types: ' + getDeckUnitTypes() + '<br> ';
 	deckStatsText.innerHTML += '<br> ';
+
+	//iterate through currentDeckList and add search for if there are anti ground and core units
+	//if there are, then add a warning to the deckStatsText
+	for (var i = 0; i < currentDeckList.length; i++) {
+		if (currentDeckList[i].includes('Anti-Ground')) {
+			document.getElementById('Anti-GroundWarning').style.color = 'white';
+		}
+		if (currentDeckList[i].includes('Anti-Air')) {
+			document.getElementById('Anti-GroundWarningWarning').style.color = 'white';
+		}
+	}
+
+
 }
 
 //addDeckUnit is called by the onClickFunction for the deck, it is passed it's name, so it's a good place to update things when a unit is added to the deck
@@ -360,6 +373,9 @@ addDeckUnit = (name) => {
 		currentDeckList.push(name);
 		updateDeckStats();
 		console.log('Added ' + name + ' to the deck');
+		//at this point, when adding a unit to the deck
+		//update the unit cells
+		updateAllDeckCells();
 	}
 	console.log(currentDeckList);
 	//update the deck stats text
@@ -389,57 +405,54 @@ Object.keys(unitJson).forEach((key) => {
 	//create alocal onClickFunction that gets passed to the addButton function
 	var onClickFunction = () => {
 		console.log(unitJson[key].Name);
-
+		//add the unit to the deck
 		updateAllDeckCells();
-		if (unitJson[key].Building == 'Core')
-			if (remCoreUnits > 0) {
-				remCoreUnits--;
-			} else {
-				console.log('No more Core units');
-				return;
-			}
-		else if (unitJson[key].Building == 'Foundry')
-			if (remFoundryUnits > 0 && remTotalFoundryUnits > 0) {
-				remFoundryUnits--;
-				remTotalFoundryUnits--;
-			} else {
-				console.log('No more Foundry units');
-				return;
-			}
-		else if (unitJson[key].Building == 'Starforge')
-			if (remStarforgeUnits > 0 && remTotalStarforgeUnits > 0) {
-				remStarforgeUnits--;
-				remTotalStarforgeUnits--;
-			} else {
-				console.log('No more Starforge units');
-				return;
-			}
-		else if (unitJson[key].Building == 'Advanced Foundry')
-			if (remAdvFoundryUnits > 0 && remTotalFoundryUnits > 0) {
-				remAdvFoundryUnits--;
-				remTotalFoundryUnits--;
-			} else {
-				console.log('No more Advanced Foundry units');
-				return;
-			}
-		else if (unitJson[key].Building == 'Advanced Starforge')
-			if (remAdvStarforgeUnits > 0 && remTotalStarforgeUnits > 0) {
-				remAdvStarforgeUnits--;
-				remTotalStarforgeUnits--;
-			} else {
-				console.log('No more Advanced Starforge units');
-				return;
-			}
-		addDeckUnit(unitJson[key].Name);
-		//iterate through the currentDeckList, if the unit is in the deck, add a class to the button
-		buttonStore.forEach((button) => {
-			if (button.innerHTML.includes(unitJson[key].Name)) {
-				button.classList.add('inDeck');
-			}
-		});
-		//call the updateDeckCellsFunction on the highest index of the currentDeckList
-		updateDeckCells(currentDeckList.length - 1, unitJson[key].Name);
-		updateAllDeckCells();
+		if (remCoreUnits > 0) {
+			remCoreUnits--;
+		}
+		else coreP.classList.add('outofStock');
+		//add a class to all buttons in the core building that are out of stock which we will turn grey from css
+		Object.keys(unitJson).forEach((key) => {
+			if (unitJson[key].Building == 'Foundry')
+				if (remFoundryUnits > 0 && remTotalFoundryUnits > 0) {
+					remFoundryUnits--;
+					remTotalFoundryUnits--;
+				} else {
+					console.log('No more Foundry units');
+					return;
+				}
+			else if (unitJson[key].Building == 'Starforge')
+				if (remStarforgeUnits > 0 && remTotalStarforgeUnits > 0) {
+					remStarforgeUnits--;
+					remTotalStarforgeUnits--;
+				} else {
+					console.log('No more Starforge units');
+					return;
+				}
+			else if (unitJson[key].Building == 'Advanced Foundry')
+				if (remAdvFoundryUnits > 0 && remTotalFoundryUnits > 0) {
+					remAdvFoundryUnits--;
+					remTotalFoundryUnits--;
+				} else {
+					console.log('No more Advanced Foundry units');
+					return;
+				}
+			else if (unitJson[key].Building == 'Advanced Starforge')
+				if (remAdvStarforgeUnits > 0 && remTotalStarforgeUnits > 0) {
+					remAdvStarforgeUnits--;
+					remTotalStarforgeUnits--;
+				} else {
+					console.log('No more Advanced Starforge units');
+					return;
+				}
+			addDeckUnit(unitJson[key].Name);
+			//iterate through the currentDeckList, if the unit is in the deck, add a class to the button/
+			// such as button.classList.add('inDeck'); also add a class if the building is out of stock
+			forEach
+			//call the updateDeckCellsFunction on the highest index of the currentDeckList
+			updateDeckCells(currentDeckList.length - 1, unitJson[key].Name);
+			updateAllDeckCells();
+		})
 	};
 	var mouseOverFunction = () => {
 		console.log('Mouse over ' + unitJson[key].Name);
@@ -465,5 +478,13 @@ Object.keys(unitJson).forEach((key) => {
 
 deckStatsText.appendChild(document.createElement('br'));
 deckStatsText.classList.add('deckStatsText');
+
+
+var clearDeckButton = document.getElementById('clearDeckButton');
+clearDeckButton.addEventListener('click', () => {
+	currentDeckList = [];
+	updateDeckStats();
+	updateAllDeckCells();
+});
 
 //console.log(text);

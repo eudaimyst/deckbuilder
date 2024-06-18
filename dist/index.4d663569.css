@@ -1,133 +1,72 @@
-body {
-  color: #f8f8ff;
-  font-style: bold;
-  background-color: #000;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  font-size: larger;
-}
-
-h1 {
-  color: #ff69b4;
-  font-family: cursive;
-}
-
-.buttonImg {
-  background-color: #333;
-  width: 64px;
-  height: 64px;
-}
-
-.deckStatsText {
-  background-color: #202020;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  font-size: smaller;
-}
-
-.testingclass {
-  align-items: flex-start;
-  margin: 0;
-  padding-right: 80%;
-}
-
-.img {
-  text-align: center;
-  color: red;
-  background-color: #000;
-}
-
-.unitButton {
-  color: #fff;
-  font-style: bold;
-  font-size: smallest;
-  background-color: #556b2f;
-  align-content: normal;
-  align-items: baseline;
-  width: 200px;
-  height: 100px;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.cells {
-  background-image: url("border_frame.89e6c05d.png");
-  align-content: end;
+.unitCard {
+  background-color: #0b0b0e;
+  border: 1px solid #b69606;
   width: 100px;
   height: 100px;
-  font-size: 12px;
+  margin: 5px;
+  padding: 0;
+  position: relative;
 }
 
-.warning {
-  color: red;
-  font-size: larger;
+.card_health_div {
+  color: #138d13;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-#cell1 {
-  border: outset #d5b60a;
+.card_damage_div {
+  color: #ad3e3e;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  right: 0;
 }
 
-#cell2 {
-  border: outset #ff8c00;
+.card_speed_div {
+  color: #cfd143;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 40px;
+  right: 0;
 }
 
-#cell3 {
-  border: outset #8b0000;
+.card_range_div {
+  color: #7790ff;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  right: 0;
 }
 
-#cell4 {
-  border: outset #ff4500;
+.card_name_div {
+  margin: 2px;
+  padding: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-#cell5 {
-  border: outset #d5b60a;
+#unitContainer {
+  color: #ffe2a4;
+  background-color: #090416;
+  flex-flow: wrap;
+  width: 50%;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  display: flex;
 }
 
-#cell6 {
-  border: outset #008b8b;
-}
-
-#cell7 {
-  border: outset purple;
-}
-
-#cell8 {
-  border: outset #00f;
-}
-
-#Foundry {
-  color: #fff;
-  background-color: #700000;
-  border: outset #ff8c00;
-  width: 1200px;
-}
-
-#Core {
-  color: #fff;
-  background-color: #007000;
-  border: outset #d5b60a;
-  width: 1200px;
-}
-
-#AdvFoundry {
-  color: #fff;
-  background-color: #700000;
-  border: outset #8b0000;
-  width: 1200px;
-}
-
-#Starforge {
-  color: #fff;
-  background-color: #000070;
-  border: outset #008b8b;
-  width: 1200px;
-}
-
-#AdvStarforge {
-  color: #fff;
-  background-color: #000070;
-  border: outset purple;
-  width: 1200px;
-}
-
-.inDeck {
-  background-color: #666;
+body {
+  background-color: #000;
 }
 /*# sourceMappingURL=index.4d663569.css.map */
